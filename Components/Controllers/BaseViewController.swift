@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RswiftResources
 
 open class BaseViewController: UIViewController {
     open override func viewDidLoad() {

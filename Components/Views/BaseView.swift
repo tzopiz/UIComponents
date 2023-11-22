@@ -7,15 +7,14 @@
 
 import UIKit
 
-class BaseView: UIView {
+open class BaseView: UIView {
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupComponents()
         layoutComponents()
         configureComponents()
     }
-    
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         super.init(frame: .zero)
         setupComponents()
         layoutComponents()

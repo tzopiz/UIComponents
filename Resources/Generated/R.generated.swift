@@ -14,11 +14,105 @@ public struct _R {
   public init(bundle: Foundation.Bundle) {
     self.bundle = bundle
   }
-  public func validate() throws {
+  public var color: color { .init(bundle: bundle) }
+  public var font: font { .init(bundle: bundle) }
+  public var file: file { .init(bundle: bundle) }
 
+  public func color(bundle: Foundation.Bundle) -> color {
+    .init(bundle: bundle)
+  }
+  public func font(bundle: Foundation.Bundle) -> font {
+    .init(bundle: bundle)
+  }
+  public func file(bundle: Foundation.Bundle) -> file {
+    .init(bundle: bundle)
+  }
+  public func validate() throws {
+    try self.font.validate()
   }
 
   public struct project {
     public let developmentRegion = "en"
+  }
+
+  /// This `_R.color` struct is generated, and contains static references to 4 colors.
+  public struct color {
+    public let bundle: Foundation.Bundle
+    public init(bundle: Foundation.Bundle) {
+      self.bundle = bundle
+    }
+
+    /// Color `button`.
+    public var button: RswiftResources.ColorResource { .init(name: "button", path: [], bundle: bundle) }
+
+    /// Color `darkText`.
+    public var darkText: RswiftResources.ColorResource { .init(name: "darkText", path: [], bundle: bundle) }
+
+    /// Color `lightText`.
+    public var lightText: RswiftResources.ColorResource { .init(name: "lightText", path: [], bundle: bundle) }
+
+    /// Color `secondaryText`.
+    public var secondaryText: RswiftResources.ColorResource { .init(name: "secondaryText", path: [], bundle: bundle) }
+  }
+
+  /// This `_R.font` struct is generated, and contains static references to 6 fonts.
+  public struct font: Sequence {
+    public let bundle: Foundation.Bundle
+    public init(bundle: Foundation.Bundle) {
+      self.bundle = bundle
+    }
+
+    /// Font `Rubik-Black`.
+    public var rubikBlack: RswiftResources.FontResource { .init(name: "Rubik-Black", bundle: bundle, filename: "Rubik-Black.ttf") }
+
+    /// Font `Rubik-Bold`.
+    public var rubikBold: RswiftResources.FontResource { .init(name: "Rubik-Bold", bundle: bundle, filename: "Rubik-Bold.ttf") }
+
+    /// Font `Rubik-Italic`.
+    public var rubikItalic: RswiftResources.FontResource { .init(name: "Rubik-Italic", bundle: bundle, filename: "Rubik-Italic.ttf") }
+
+    /// Font `Rubik-Light`.
+    public var rubikLight: RswiftResources.FontResource { .init(name: "Rubik-Light", bundle: bundle, filename: "Rubik-Light.ttf") }
+
+    /// Font `Rubik-Medium`.
+    public var rubikMedium: RswiftResources.FontResource { .init(name: "Rubik-Medium", bundle: bundle, filename: "Rubik-Medium.ttf") }
+
+    /// Font `Rubik-Regular`.
+    public var rubikRegular: RswiftResources.FontResource { .init(name: "Rubik-Regular", bundle: bundle, filename: "Rubik-Regular.ttf") }
+
+    public func makeIterator() -> IndexingIterator<[RswiftResources.FontResource]> {
+      [rubikBlack, rubikBold, rubikItalic, rubikLight, rubikMedium, rubikRegular].makeIterator()
+    }
+    public func validate() throws {
+      for font in self {
+        if !font.canBeLoaded() { throw RswiftResources.ValidationError("[R.swift] Font '\(font.name)' could not be loaded, is '\(font.filename)' added to the UIAppFonts array in this targets Info.plist?") }
+      }
+    }
+  }
+
+  /// This `_R.file` struct is generated, and contains static references to 6 resource files.
+  public struct file {
+    public let bundle: Foundation.Bundle
+    public init(bundle: Foundation.Bundle) {
+      self.bundle = bundle
+    }
+
+    /// Resource file `Rubik-Black.ttf`.
+    public var rubikBlackTtf: RswiftResources.FileResource { .init(name: "Rubik-Black", pathExtension: "ttf", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `Rubik-Bold.ttf`.
+    public var rubikBoldTtf: RswiftResources.FileResource { .init(name: "Rubik-Bold", pathExtension: "ttf", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `Rubik-Italic.ttf`.
+    public var rubikItalicTtf: RswiftResources.FileResource { .init(name: "Rubik-Italic", pathExtension: "ttf", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `Rubik-Light.ttf`.
+    public var rubikLightTtf: RswiftResources.FileResource { .init(name: "Rubik-Light", pathExtension: "ttf", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `Rubik-Medium.ttf`.
+    public var rubikMediumTtf: RswiftResources.FileResource { .init(name: "Rubik-Medium", pathExtension: "ttf", bundle: bundle, locale: LocaleReference.none) }
+
+    /// Resource file `Rubik-Regular.ttf`.
+    public var rubikRegularTtf: RswiftResources.FileResource { .init(name: "Rubik-Regular", pathExtension: "ttf", bundle: bundle, locale: LocaleReference.none) }
   }
 }
