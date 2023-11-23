@@ -8,11 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		0A80B5FC2B0E36BA00263BF9 /* UIComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A80B5FB2B0E36BA00263BF9 /* UIComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AC2105C2B0FB94E0023665B /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC210582B0FB94E0023665B /* BaseViewController.swift */; };
+		0AC2105D2B0FB94E0023665B /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2105A2B0FB94E0023665B /* InfoView.swift */; };
+		0AC2105E2B0FB94E0023665B /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC2105B2B0FB94E0023665B /* BaseView.swift */; };
+		0AC210632B0FB9570023665B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC210612B0FB9570023665B /* R.generated.swift */; };
+		0AC210642B0FB9570023665B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AC210622B0FB9570023665B /* Assets.xcassets */; };
+		0AC2106F2B0FBA1F0023665B /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AC210692B0FBA0B0023665B /* Rubik-Bold.ttf */; };
+		0AC210702B0FBA1F0023665B /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2106A2B0FBA0B0023665B /* Rubik-Light.ttf */; };
+		0AC210712B0FBA1F0023665B /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2106B2B0FBA0B0023665B /* Rubik-Medium.ttf */; };
+		0AC210722B0FBA1F0023665B /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2106C2B0FBA0B0023665B /* Rubik-Black.ttf */; };
+		0AC210732B0FBA1F0023665B /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2106D2B0FBA0B0023665B /* Rubik-Italic.ttf */; };
+		0AC210742B0FBA1F0023665B /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0AC2106E2B0FBA0B0023665B /* Rubik-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A80B5F82B0E36BA00263BF9 /* UIComponents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIComponents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A80B5FB2B0E36BA00263BF9 /* UIComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIComponents.h; sourceTree = "<group>"; };
+		0AC210582B0FB94E0023665B /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		0AC2105A2B0FB94E0023665B /* InfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		0AC2105B2B0FB94E0023665B /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		0AC210612B0FB9570023665B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		0AC210622B0FB9570023665B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0AC210692B0FBA0B0023665B /* Rubik-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		0AC2106A2B0FBA0B0023665B /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
+		0AC2106B2B0FBA0B0023665B /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		0AC2106C2B0FBA0B0023665B /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
+		0AC2106D2B0FBA0B0023665B /* Rubik-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		0AC2106E2B0FBA0B0023665B /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +51,8 @@
 		0A80B5EE2B0E36BA00263BF9 = {
 			isa = PBXGroup;
 			children = (
+				0AC2105F2B0FB9570023665B /* Resources */,
+				0AC210562B0FB94E0023665B /* Components */,
 				0A80B5FA2B0E36BA00263BF9 /* UIComponents */,
 				0A80B5F92B0E36BA00263BF9 /* Products */,
 			);
@@ -48,6 +72,63 @@
 				0A80B5FB2B0E36BA00263BF9 /* UIComponents.h */,
 			);
 			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		0AC210562B0FB94E0023665B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0AC210572B0FB94E0023665B /* Controllers */,
+				0AC210592B0FB94E0023665B /* Views */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0AC210572B0FB94E0023665B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0AC210582B0FB94E0023665B /* BaseViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0AC210592B0FB94E0023665B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AC2105A2B0FB94E0023665B /* InfoView.swift */,
+				0AC2105B2B0FB94E0023665B /* BaseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0AC2105F2B0FB9570023665B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0AC210682B0FBA0B0023665B /* RubikFont */,
+				0AC210602B0FB9570023665B /* Generated */,
+				0AC210622B0FB9570023665B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0AC210602B0FB9570023665B /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				0AC210612B0FB9570023665B /* R.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		0AC210682B0FBA0B0023665B /* RubikFont */ = {
+			isa = PBXGroup;
+			children = (
+				0AC210692B0FBA0B0023665B /* Rubik-Bold.ttf */,
+				0AC2106A2B0FBA0B0023665B /* Rubik-Light.ttf */,
+				0AC2106B2B0FBA0B0023665B /* Rubik-Medium.ttf */,
+				0AC2106C2B0FBA0B0023665B /* Rubik-Black.ttf */,
+				0AC2106D2B0FBA0B0023665B /* Rubik-Italic.ttf */,
+				0AC2106E2B0FBA0B0023665B /* Rubik-Regular.ttf */,
+			);
+			path = RubikFont;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +200,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC2106F2B0FBA1F0023665B /* Rubik-Bold.ttf in Resources */,
+				0AC210702B0FBA1F0023665B /* Rubik-Light.ttf in Resources */,
+				0AC210712B0FBA1F0023665B /* Rubik-Medium.ttf in Resources */,
+				0AC210722B0FBA1F0023665B /* Rubik-Black.ttf in Resources */,
+				0AC210732B0FBA1F0023665B /* Rubik-Italic.ttf in Resources */,
+				0AC210742B0FBA1F0023665B /* Rubik-Regular.ttf in Resources */,
+				0AC210642B0FB9570023665B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +217,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC2105E2B0FB94E0023665B /* BaseView.swift in Sources */,
+				0AC2105D2B0FB94E0023665B /* InfoView.swift in Sources */,
+				0AC2105C2B0FB94E0023665B /* BaseViewController.swift in Sources */,
+				0AC210632B0FB9570023665B /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +366,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +398,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
