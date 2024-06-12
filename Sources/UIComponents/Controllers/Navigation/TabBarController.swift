@@ -7,14 +7,24 @@
 
 import UIKit
 
-public struct Tab {
-    let title: String?
-    let image: UIImage?
-    let selectedImage: UIImage?
-    let viewController: UIViewController
-}
-
 open class TabBarController: UITabBarController {
+    public struct Tab {
+        public let title: String?
+        public let image: UIImage?
+        public let selectedImage: UIImage?
+        public let viewController: UIViewController
+
+        public init(
+            title: String? = nil,
+            image: UIImage? = nil,
+            selectedImage: UIImage? = nil,
+            viewController: UIViewController) {
+            self.title = title
+            self.image = image
+            self.selectedImage = selectedImage
+            self.viewController = viewController
+        }
+    }
     
     public init(
         tabs: Array<Tab>,
