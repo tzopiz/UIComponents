@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LabelCollectionViewCell: BaseCollectionViewCell {
+open class LabelCollectionViewCell: BaseCollectionViewCell {
     override class var reuseIdentifier: String { String(describing: LabelCollectionViewCell.self) }
     private let label = UILabel()
     override func configure(_ parametr: Any) {
@@ -22,10 +22,10 @@ class LabelCollectionViewCell: BaseCollectionViewCell {
 
 // MARK: - Configure
 extension LabelCollectionViewCell {
-    override func setupViews() {
+    open override func setupViews() {
         addSubviews(label)
     }
-    override func layoutViews() {
+    override open func layoutViews() {
         label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: topAnchor, constant: 4),

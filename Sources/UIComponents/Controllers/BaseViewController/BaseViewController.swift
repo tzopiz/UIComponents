@@ -8,14 +8,14 @@
 import UIKit
 
 open class BaseViewController<ViewModel: IBaseViewModel>: UIViewController {
-    enum NavBarPosition {
+    public enum NavBarPosition {
         case left, right
     }
     
-    var viewModel: ViewModel!
-    var presentHandler: ((UIViewController, Bool) -> Void)?
+    public var viewModel: ViewModel!
+    public var presentHandler: ((UIViewController, Bool) -> Void)?
     
-    init(viewModel: ViewModel) {
+    public init(viewModel: ViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -34,16 +34,16 @@ open class BaseViewController<ViewModel: IBaseViewModel>: UIViewController {
     /// Добавляет подвиды на контроллер.
     /// Добавьте код для добавления подвидов на контроллер,
     /// таких как их инициализация, настройка свойств и добавление на представление.
-    func setupViews() { }
+    open func setupViews() { }
     /// Устанавливает ограничения для подвидов внутри контроллера.
     /// Добавьте код для установки ограничений для подвидов,
     /// таких как установка автолейаут-ограничений, задание отступов и т.д.
-    func layoutViews() { }
+    open func layoutViews() { }
     /// Настраивает внешний вид контроллера.
     /// Добавьте код для настройки внешнего вида контроллера,
     /// таких как установка фона, цветов, шрифтов и других свойств визуальных элементов.
     /// Вы также можете применять стили, добавлять тени, закруглять углы и т.д.
-    func configureViews() {
+    open func configureViews() {
         navigationItem.title = viewModel.title
         view.backgroundColor = .secondarySystemBackground
         viewModel.navigationDelegate = self
@@ -51,7 +51,7 @@ open class BaseViewController<ViewModel: IBaseViewModel>: UIViewController {
 }
 
 // MARK: - Supporting Functions
-extension BaseViewController {
+public extension BaseViewController {
     func addNavBarButton(
         at position: NavBarPosition,
         with title: String? = nil,

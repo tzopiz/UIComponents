@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class BaseTextField: UITextField {
+open class BaseTextField: UITextField {
     private var padding: UIEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -55,7 +55,7 @@ public class BaseTextField: UITextField {
 }
 
 // MARK: - Configure
-@objc
+@objc public
 extension BaseTextField {
     /// Добавляет подвиды на представление.
     /// Добавьте код для добавления подвидов на представление,

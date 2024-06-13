@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class BaseStackView: UIStackView {
+open class BaseStackView: UIStackView {
     public init(axis: NSLayoutConstraint.Axis, spacing: CGFloat = 8) {
         super.init(frame: .zero)
         self.axis = axis
@@ -19,7 +19,7 @@ public final class BaseStackView: UIStackView {
 }
 
 // MARK: - Configure
-@objc
+@objc public
 extension BaseStackView {
     /// Добавляет подвиды на представление.
     /// Добавьте код для добавления подвидов на представление,

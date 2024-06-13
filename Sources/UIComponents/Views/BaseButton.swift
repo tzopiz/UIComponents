@@ -7,7 +7,7 @@
 
 import UIKit
 
-public class BaseButton: UIButton {
+open class BaseButton: UIButton {
     convenience public init() {
         self.init(type: .system)
         titleLabel?.lineBreakMode = .byWordWrapping

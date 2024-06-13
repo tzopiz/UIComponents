@@ -13,12 +13,13 @@ open class TabBarController: UITabBarController {
         public let image: UIImage?
         public let selectedImage: UIImage?
         public let viewController: UIViewController
-
+        
         public init(
             title: String? = nil,
             image: UIImage? = nil,
             selectedImage: UIImage? = nil,
-            viewController: UIViewController) {
+            viewController: UIViewController
+        ) {
             self.title = title
             self.image = image
             self.selectedImage = selectedImage
@@ -39,11 +40,11 @@ open class TabBarController: UITabBarController {
         super.init(coder: coder)
     }
     
-    private func switchTo(tab index: Int) {
+    public func switchTo(tab index: Int) {
         selectedIndex = index
     }
     
-    private func configureAppearance(with tabs: Array<Tab>) {
+    open func configureAppearance(with tabs: Array<Tab>) {
         tabBar.tintColor = .label
         tabBar.unselectedItemTintColor = .secondaryLabel
         tabBar.backgroundColor = .systemBackground

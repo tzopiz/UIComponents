@@ -17,7 +17,7 @@ open class CollectionViewModel: ICollectionViewModel {
     private(set) public var items: [String]
     public var navigationDelegate: ViewModelNavigationDelegate?
     
-    init(title: String? = nil, items: [String]) {
+    public init(title: String? = nil, items: [String]) {
         self.items = items
         self.title = title
     }

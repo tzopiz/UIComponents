@@ -7,12 +7,11 @@
 
 import UIKit
 
-class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: UICollectionViewCell>:
-    UICollectionViewController, UICollectionViewDelegateFlowLayout  where Cell: IReusableCell {
+open class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: UICollectionViewCell>: UICollectionViewController, UICollectionViewDelegateFlowLayout where Cell: IReusableCell {
     
-    var viewModel: ViewModel
+    public var viewModel: ViewModel
     
-    init(viewModel: ViewModel, layout: UICollectionViewLayout) {
+    public init(viewModel: ViewModel, layout: UICollectionViewLayout) {
         self.viewModel = viewModel
         super.init(collectionViewLayout: layout)
     }
@@ -26,7 +25,7 @@ class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: UIColl
         layoutViews()
         configureViews()
     }
-    override public func viewWillAppear(_ animated: Bool) {
+    override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.refreshData()
     }
@@ -35,16 +34,16 @@ class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: UIColl
     /// Добавляет подвиды на контроллер.
     /// Добавьте код для добавления подвидов на контроллер,
     /// таких как их инициализация, настройка свойств и добавление на представление.
-    func setupViews() { }
+    open func setupViews() { }
     /// Устанавливает ограничения для подвидов внутри контроллера.
     /// Добавьте код для установки ограничений для подвидов,
     /// таких как установка автолейаут-ограничений, задание отступов и т.д.
-    func layoutViews() { }
+    open func layoutViews() { }
     /// Настраивает внешний вид контроллера.
     /// Добавьте код для настройки внешнего вида контроллера,
     /// таких как установка фона, цветов, шрифтов и других свойств визуальных элементов.
     /// Вы также можете применять стили, добавлять тени, закруглять углы и т.д.
-    func configureViews() {
+    open func configureViews() {
         navigationItem.title = viewModel.title
         view.backgroundColor = .secondarySystemBackground
         collectionView.registerCells(Cell.self)
@@ -56,12 +55,12 @@ class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: UIColl
     }
     
     // MARK: - UICollectionViewDataSource
-    override func numberOfSections(in collectionView: UICollectionView) -> Int { 1 }
-    override func collectionView(
+    override open func numberOfSections(in collectionView: UICollectionView) -> Int { 1 }
+    override open func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int { viewModel.items.count }
-    override func collectionView(
+    override open func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
@@ -73,32 +72,32 @@ class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: UIColl
         return cell
     }
     // MARK: - UICollectionViewDelegateFlowLayout
-    func collectionView(
+    open func collectionView(
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize { CGSize(width: collectionView.frame.width, height: 400) }
     
-    func collectionView(_ collectionView: UICollectionView,
+    open func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int)
     -> UIEdgeInsets { return UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0) }
     
-    func collectionView(
+    open func collectionView(
         _ collectionView: UICollectionView,
         layout collectionViewLayout: UICollectionViewLayout,
         minimumLineSpacingForSectionAt section: Int
     ) -> CGFloat { 8 }
     
     // MARK: - Actions
-    @objc func refreshData() {
+    @objc open func refreshData() {
         DispatchQueue.main.async {
             self.collectionView.refreshControl?.beginRefreshing()
             self.collectionView.reloadData()
             self.collectionView.refreshControl?.endRefreshing()
         }
     }
-    @objc func scrollToTop() {
+    @objc open func scrollToTop() {
         collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
     }
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIView {
+public extension UIView {
     /// Добавляет верхнюю границу с указанным цветом и высотой к текущему представлению.
     /// - Parameters:
     ///   - color: Цвет верхней границы.
@@ -52,9 +52,11 @@ extension UIView {
             self.addSubview(view)
         }
     }
-    ///
-    ///
-    ///
+    /// Добавляет жест на представление
+    /// - Parameters:
+    ///   - tapNumber: The number of taps required to recognize the gesture. For example, pass 1 for a single tap, 2 for a double tap, etc.
+    ///   - target: The object that is the recipient of action messages sent by the receiver when it recognizes a gesture. The action method must conform to the following signature: `func handleTap(_ sender: UITapGestureRecognizer)`.
+    ///   - action: A selector identifying the method implemented by the `target` to handle the tap gesture. This method will be called when the gesture recognizer detects the specified number of taps.
     func addTapGesture(tapNumber: Int, target: Any, action: Selector) {
         let tap = UITapGestureRecognizer(target: target, action: action)
         tap.numberOfTapsRequired = tapNumber

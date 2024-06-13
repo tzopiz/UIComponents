@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UICollectionView {
+public extension UICollectionView {
     /// Регистрирует указанные типы ячеек для использования в коллекции.
     /// - Parameter cells: Типы ячеек, которые необходимо зарегистрировать.
     func registerCells(_ cells: UICollectionViewCell.Type...) {

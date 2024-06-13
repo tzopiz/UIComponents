@@ -16,7 +16,7 @@ import UIKit
 /// self.textAlignment = .left
 /// self.lineBreakMode = .byWordWrapping
 /// ```
-public class BaseLabel: UILabel {
+open class BaseLabel: UILabel {
     public enum FontStyle {
         case black, bold, italic, light, regular
     }
@@ -56,7 +56,7 @@ public class BaseLabel: UILabel {
 }
 
 // MARK: - Configure
-@objc
+@objc public
 extension BaseLabel {
     /// Добавляет подвиды на представление.
     /// Добавьте код для добавления подвидов на представление,
