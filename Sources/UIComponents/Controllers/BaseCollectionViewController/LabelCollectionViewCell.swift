@@ -8,14 +8,14 @@
 import UIKit
 
 open class LabelCollectionViewCell: BaseCollectionViewCell {
-    override class var reuseIdentifier: String { String(describing: LabelCollectionViewCell.self) }
+    public override class var reuseIdentifier: String { String(describing: LabelCollectionViewCell.self) }
     private let label = UILabel()
-    override func configure(_ parametr: Any) {
+    public override func configure(_ parametr: Any) {
         guard let title = parametr as? String else { return }
         label.text = title
     }
     
-    required init?(coder: NSCoder) {
+    required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 }
