@@ -8,7 +8,7 @@
 import UIKit
 
 open class LabelCollectionViewCell: BaseCollectionViewCell {
-    public override class var reuseIdentifier: String { String(describing: LabelCollectionViewCell.self) }
+    open override class var reuseIdentifier: String { String(describing: LabelCollectionViewCell.self) }
     private let label = UILabel()
     public override func configure(_ parametr: Any) {
         guard let title = parametr as? String else { return }
