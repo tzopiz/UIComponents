@@ -14,10 +14,10 @@ public protocol ICollectionViewModel: IBaseViewModel {
 }
 open class CollectionViewModel: ICollectionViewModel {
     public var title: String?
-    private(set) public var items: [String]
+    private(set) public var items: Array<String>
     public var navigationDelegate: ViewModelNavigationDelegate?
     
-    public init(title: String? = nil, items: [String]) {
+    public init(title: String? = nil, items: Array<String>) {
         self.items = items
         self.title = title
     }

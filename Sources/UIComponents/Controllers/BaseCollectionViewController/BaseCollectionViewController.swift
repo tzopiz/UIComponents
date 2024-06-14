@@ -19,13 +19,13 @@ open class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: U
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         layoutViews()
         configureViews()
     }
-    override open func viewWillAppear(_ animated: Bool) {
+    open override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.refreshData()
     }
@@ -55,12 +55,12 @@ open class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: U
     }
     
     // MARK: - UICollectionViewDataSource
-    override open func numberOfSections(in collectionView: UICollectionView) -> Int { 1 }
-    override open func collectionView(
+    open override func numberOfSections(in collectionView: UICollectionView) -> Int { 1 }
+    open override func collectionView(
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int { viewModel.items.count }
-    override open func collectionView(
+    open override func collectionView(
         _ collectionView: UICollectionView,
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {

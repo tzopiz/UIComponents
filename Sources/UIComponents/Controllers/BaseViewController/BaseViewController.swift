@@ -23,7 +23,7 @@ open class BaseViewController<ViewModel: IBaseViewModel>: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override public func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
         layoutViews()
@@ -51,8 +51,8 @@ open class BaseViewController<ViewModel: IBaseViewModel>: UIViewController {
 }
 
 // MARK: - Supporting Functions
-public extension BaseViewController {
-    func addNavBarButton(
+extension BaseViewController {
+    public func addNavBarButton(
         at position: NavBarPosition,
         with title: String? = nil,
         image: UIImage? = nil,

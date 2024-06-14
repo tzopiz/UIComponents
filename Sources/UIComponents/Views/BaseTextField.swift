@@ -9,7 +9,7 @@ import UIKit
 
 open class BaseTextField: UITextField {
     private var padding: UIEdgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
-    override public init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
         layoutViews()
@@ -27,7 +27,7 @@ open class BaseTextField: UITextField {
     /// font: UIFont? = UIFont(name: "AppleSDGothicNeo-Regular", size: 15),
     /// backgroundColor: UIColor = UIColor.clear
     /// ```
-    public func configure(
+    open func configure(
         placeholder: String? = nil,
         cornerRadius: CGFloat = 0,
         borderWidth: CGFloat = 0,
@@ -46,29 +46,28 @@ open class BaseTextField: UITextField {
         self.backgroundColor = backgroundColor
         self.padding = padding
     }
-    override public func textRect(forBounds bounds: CGRect) -> CGRect {
+    open override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
-    override public func editingRect(forBounds bounds: CGRect) -> CGRect {
+    open override func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
 }
 
 // MARK: - Configure
-@objc public
+@objc
 extension BaseTextField {
     /// Добавляет подвиды на представление.
     /// Добавьте код для добавления подвидов на представление,
     /// таких как их инициализация, настройка свойств и добавление на представление.
-    func setupViews() { }
+    open func setupViews() { }
     /// Устанавливает ограничения для подвидов внутри представления.
     /// Добавьте код для установки ограничений для подвидов,
     /// таких как установка автолейаут-ограничений, задание отступов и т.д.
-    func layoutViews() { }
+    open func layoutViews() { }
     /// Настраивает внешний вид представления.
     /// Добавьте код для настройки внешнего вида представления,
     /// таких как установка фона, цветов, шрифтов и других свойств визуальных элементов.
     /// Вы также можете применять стили, добавлять тени, закруглять углы и т.д.
-    func configureViews() {
-    }
+    open func configureViews() { }
 }

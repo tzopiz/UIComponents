@@ -7,6 +7,9 @@
 
 import UIKit
 
+/// Базовая реализация `UITabBarController` в приложении с несколькими экранами.
+/// Переопределите метод `configureAppearance(_: Array<Tab>)` для
+/// кастомного отображения элементов `Tabbar`
 open class TabBarController: UITabBarController {
     public struct Tab {
         public let title: String?
@@ -43,7 +46,13 @@ open class TabBarController: UITabBarController {
     public func switchTo(tab index: Int) {
         selectedIndex = index
     }
-    
+    /// Настраивает внешний вид панели вкладок с предоставленными вкладками.
+    ///
+    /// - Parameters:
+    ///   - tabs: Массив объектов `Tab`, представляющих каждую вкладку на панели вкладок.
+    ///
+    /// Этот метод настраивает внешний вид панели вкладок, включая цвет ее оттенка, цвет оттенка невыбранного элемента,
+    /// цвет фона и назначает контроллеры представления для каждой вкладки на основе предоставленных объектов `Tab`.
     open func configureAppearance(with tabs: Array<Tab>) {
         tabBar.tintColor = .label
         tabBar.unselectedItemTintColor = .secondaryLabel

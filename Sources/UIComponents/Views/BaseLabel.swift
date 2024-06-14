@@ -20,8 +20,8 @@ open class BaseLabel: UILabel {
     public enum FontStyle {
         case black, bold, italic, light, regular
     }
-    enum Font {
-        static func rubik(style fontStyle: FontStyle, size fontSize: CGFloat) -> UIFont? {
+    public enum Font {
+        public static func rubik(style fontStyle: FontStyle, size fontSize: CGFloat) -> UIFont? {
             switch fontStyle {
             case .italic:       return UIFont(name: "AppleSDGothicNeo-Italic", size: fontSize)
             case .light:        return UIFont(name: "AppleSDGothicNeo-Light", size: fontSize)
@@ -56,19 +56,19 @@ open class BaseLabel: UILabel {
 }
 
 // MARK: - Configure
-@objc public
+@objc
 extension BaseLabel {
     /// Добавляет подвиды на представление.
     /// Добавьте код для добавления подвидов на представление,
     /// таких как их инициализация, настройка свойств и добавление на представление.
-    func setupViews() { }
+    open func setupViews() { }
     /// Устанавливает ограничения для подвидов внутри представления.
     /// Добавьте код для установки ограничений для подвидов,
     /// таких как установка автолейаут-ограничений, задание отступов и т.д.
-    func layoutViews() { }
+    open func layoutViews() { }
     /// Настраивает внешний вид представления.
     /// Добавьте код для настройки внешнего вида представления,
     /// таких как установка фона, цветов, шрифтов и других свойств визуальных элементов.
     /// Вы также можете применять стили, добавлять тени, закруглять углы и т.д.
-    func configureViews() { }
+    open func configureViews() { }
 }

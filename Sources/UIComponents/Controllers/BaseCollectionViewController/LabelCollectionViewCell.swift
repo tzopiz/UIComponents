@@ -9,8 +9,8 @@ import UIKit
 
 open class LabelCollectionViewCell: BaseCollectionViewCell {
     open override class var reuseIdentifier: String { String(describing: LabelCollectionViewCell.self) }
-    private let label = UILabel()
-    public override func configure(_ parametr: Any) {
+    public let label = UILabel()
+    open override func configure(_ parametr: Any) {
         guard let title = parametr as? String else { return }
         label.text = title
     }
@@ -25,7 +25,7 @@ extension LabelCollectionViewCell {
     open override func setupViews() {
         addSubviews(label)
     }
-    override open func layoutViews() {
+    open override func layoutViews() {
         label.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             label.topAnchor.constraint(equalTo: topAnchor, constant: 4),

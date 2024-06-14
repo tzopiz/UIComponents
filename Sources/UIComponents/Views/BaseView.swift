@@ -8,7 +8,7 @@
 import UIKit
 
 open class BaseView: UIView {
-    override public init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
         layoutViews()
@@ -20,19 +20,19 @@ open class BaseView: UIView {
 }
 
 // MARK: - Configure
-@objc public
+@objc
 extension BaseView {
     /// Добавляет подвиды на представление.
     /// Добавьте код для добавления подвидов на представление,
     /// таких как их инициализация, настройка свойств и добавление на представление.
-    func setupViews() { }
+    open func setupViews() { }
     /// Устанавливает ограничения для подвидов внутри представления.
     /// Добавьте код для установки ограничений для подвидов,
     /// таких как установка автолейаут-ограничений, задание отступов и т.д.
-    func layoutViews() { }
+    open func layoutViews() { }
     /// Настраивает внешний вид представления.
     /// Добавьте код для настройки внешнего вида представления,
     /// таких как установка фона, цветов, шрифтов и других свойств визуальных элементов.
     /// Вы также можете применять стили, добавлять тени, закруглять углы и т.д.
-    func configureViews() { }
+    open func configureViews() { }
 }

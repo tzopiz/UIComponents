@@ -8,7 +8,7 @@
 import UIKit
 
 open class NavigationController: UINavigationController {
-    override public func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         navigationBar.isTranslucent = false

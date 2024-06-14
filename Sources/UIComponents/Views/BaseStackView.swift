@@ -19,25 +19,25 @@ open class BaseStackView: UIStackView {
 }
 
 // MARK: - Configure
-@objc public
+@objc
 extension BaseStackView {
     /// Добавляет подвиды на представление.
     /// Добавьте код для добавления подвидов на представление,
     /// таких как их инициализация, настройка свойств и добавление на представление.
-    func setupViews() { }
+    open func setupViews() { }
     /// Устанавливает ограничения для подвидов внутри представления.
     /// Добавьте код для установки ограничений для подвидов,
     /// таких как установка автолейаут-ограничений, задание отступов и т.д.
-    func layoutViews() { }
+    open func layoutViews() { }
     /// Настраивает внешний вид представления.
     /// Добавьте код для настройки внешнего вида представления,
     /// таких как установка фона, цветов, шрифтов и других свойств визуальных элементов.
     /// Вы также можете применять стили, добавлять тени, закруглять углы и т.д.
-    func configureViews() { }
+    open func configureViews() { }
 }
 
 extension BaseStackView {
-    func addArrangedSubviews(_ views: UIView...) {
+    public func addArrangedSubviews(_ views: UIView...) {
         views.forEach { self.addArrangedSubview($0) }
     }
 }
