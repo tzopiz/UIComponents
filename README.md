@@ -8,7 +8,7 @@
 
 `BaseViewController` является базовым классом для создания контроллеров экранов с использованием шаблона MVVM. Он предоставляет основные методы для настройки, размещения и конфигурации визуальных элементов интерфейса. Класс поддерживает добавление кнопок на навигационную панель как слева, так и справа.
 
-#### Особенности `BaseViewController`:
+#### Особенности BaseViewController:
 
 - **viewModel**: Связывает контроллер с соответствующей ViewModel.
 - **presentHandler**: Обработчик для представления других контроллеров.
@@ -20,11 +20,11 @@
 
 - **addNavBarButton(at:with:image:selector:)**: Добавляет кнопку на навигационную панель контроллера.
 
-### `ViewModelNavigationDelegate`
+### ViewModelNavigationDelegate
 
 Протокол `ViewModelNavigationDelegate` предоставляет методы для навигации между экранами, используя UINavigationController.
 
-#### Методы `ViewModelNavigationDelegate`:
+#### Методы ViewModelNavigationDelegate:
 
 - **pushViewController(_:animated:)**: Помещает новый контроллер на стек навигации.
 - **dismiss(animated:)**: Закрывает текущий контроллер, если он был открыт модально.
