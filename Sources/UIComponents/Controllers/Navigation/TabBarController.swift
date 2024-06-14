@@ -11,12 +11,20 @@ import UIKit
 /// Переопределите метод `configureAppearance(_: Array<Tab>)` для
 /// кастомного отображения элементов `Tabbar`
 open class TabBarController: UITabBarController {
+    
+
     public struct Tab {
         public let title: String?
         public let image: UIImage?
         public let selectedImage: UIImage?
         public let viewController: UIViewController
         
+        /// Инициализирует новую вкладку с указанными параметрами.
+        /// - Parameters:
+        ///   - title: Название вкладки. По умолчанию - `nil`.
+        ///   - image: Изображение вкладки в обычном состоянии. По умолчанию - `nil`.
+        ///   - selectedImage: Изображение вкладки в выбранном состоянии. По умолчанию - `nil`.
+        ///   - viewController: Контроллер представления, связанный с данной вкладкой.
         public init(
             title: String? = nil,
             image: UIImage? = nil,
