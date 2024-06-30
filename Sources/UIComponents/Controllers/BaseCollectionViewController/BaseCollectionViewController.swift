@@ -7,7 +7,7 @@
 
 import UIKit
 
-open class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: BaseCollectionViewCell>: BaseViewController<ViewModel>, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+open class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: BaseCollectionViewCell>: BaseViewController<ViewModel>, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     public let collectionView: UICollectionView
     
