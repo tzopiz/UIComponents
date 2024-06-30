@@ -12,6 +12,7 @@ public protocol ICollectionViewModel: IBaseViewModel {
     var items: [ItemType] { get }
     func item(for indexPath: IndexPath) -> ItemType
 }
+
 open class CollectionViewModel: ICollectionViewModel {
     public var title: String?
     private(set) public var items: Array<String>

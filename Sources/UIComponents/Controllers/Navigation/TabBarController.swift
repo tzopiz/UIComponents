@@ -12,7 +12,6 @@ import UIKit
 /// кастомного отображения элементов `Tabbar`
 open class TabBarController: UITabBarController {
     
-
     public struct Tab {
         public let title: String?
         public let image: UIImage?

@@ -23,11 +23,11 @@ open class BaseLabel: UILabel {
     public enum Font {
         public static func rubik(style fontStyle: FontStyle, size fontSize: CGFloat) -> UIFont? {
             switch fontStyle {
-            case .italic:       return UIFont(name: "AppleSDGothicNeo-Italic", size: fontSize)
-            case .light:        return UIFont(name: "AppleSDGothicNeo-Light", size: fontSize)
-            case .regular:      return UIFont(name: "AppleSDGothicNeo-Regular", size: fontSize)
-            case .bold:         return UIFont(name: "AppleSDGothicNeo-Bold", size: fontSize)
-            case .black:        return UIFont(name: "AppleSDGothicNeo-Black", size: fontSize)
+            case .italic:  return UIFont(name: "AppleSDGothicNeo-Italic", size: fontSize)
+            case .light:   return UIFont(name: "AppleSDGothicNeo-Light", size: fontSize)
+            case .regular: return UIFont(name: "AppleSDGothicNeo-Regular", size: fontSize)
+            case .bold:    return UIFont(name: "AppleSDGothicNeo-Bold", size: fontSize)
+            case .black:   return UIFont(name: "AppleSDGothicNeo-Black", size: fontSize)
             }
         }
     }

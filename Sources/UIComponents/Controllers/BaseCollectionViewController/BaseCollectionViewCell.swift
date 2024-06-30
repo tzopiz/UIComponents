@@ -12,7 +12,9 @@ public protocol IConfigurable {
 }
 open class BaseCollectionViewCell: UICollectionViewCell, IConfigurable {
     
-    open override class var reuseIdentifier: String { String(describing: BaseCollectionViewCell.self) }
+    open override class var reuseIdentifier: String {
+        String(describing: BaseCollectionViewCell.self)
+    }
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
