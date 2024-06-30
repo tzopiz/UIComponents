@@ -9,7 +9,7 @@ import UIKit
 
 open class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: BaseCollectionViewCell>: BaseViewController<ViewModel>, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    private let collectionView: UICollectionView
+    public let collectionView: UICollectionView
     
     public init(viewModel: ViewModel, layout: UICollectionViewLayout) {
         collectionView = UICollectionView(
