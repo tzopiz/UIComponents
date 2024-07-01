@@ -7,10 +7,12 @@
 
 import UIKit
 
-public protocol IReusableCell {
+public protocol IReusableView {
     static var reuseIdentifier: String { get }
 }
-extension UICollectionViewCell: IReusableCell {
-    @objc public class var reuseIdentifier: String { String(describing: UICollectionViewCell.self) }
-}
 
+extension UICollectionViewCell {
+    @objc public class override var reuseIdentifier: String {
+        String(describing: UICollectionViewCell.self)
+    }
+}
