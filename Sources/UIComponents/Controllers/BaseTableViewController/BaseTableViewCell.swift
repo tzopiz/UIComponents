@@ -7,14 +7,14 @@
 
 import UIKit
 
-open class BaseTableViewCell: UICollectionViewCell, IConfigurable {
+open class BaseTableViewCell: UITableViewCell, IConfigurable {
     
     open override class var reuseIdentifier: String {
         String(describing: BaseTableViewCell.self)
     }
     
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
+    public init() {
+        super.init(style: .default, reuseIdentifier: nil)
         setupViews()
         layoutViews()
         configureViews()

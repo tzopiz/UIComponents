@@ -12,8 +12,9 @@ open class BaseTableViewHeaderFooterView: UITableViewHeaderFooterView, IConfigur
     open override class var reuseIdentifier: String {
         String(describing: BaseTableViewCell.self)
     }
-    public override init(reuseIdentifier: String?) {
-        super.init(reuseIdentifier: reuseIdentifier)
+    
+    public init() {
+        super.init(reuseIdentifier: nil)
         setupViews()
         layoutViews()
         configureViews()
