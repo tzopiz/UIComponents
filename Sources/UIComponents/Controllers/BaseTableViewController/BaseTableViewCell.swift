@@ -12,9 +12,8 @@ open class BaseTableViewCell: UITableViewCell, IConfigurable {
     open override class var reuseIdentifier: String {
         String(describing: BaseTableViewCell.self)
     }
-    
-    public init() {
-        super.init(style: .default, reuseIdentifier: nil)
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupViews()
         layoutViews()
         configureViews()

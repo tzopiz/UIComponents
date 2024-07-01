@@ -12,14 +12,12 @@ open class BaseTableViewHeaderFooterView: UITableViewHeaderFooterView, IConfigur
     open override class var reuseIdentifier: String {
         String(describing: BaseTableViewCell.self)
     }
-    
-    public init() {
-        super.init(reuseIdentifier: nil)
+    public override init(reuseIdentifier: String?) {
+        super.init(reuseIdentifier: reuseIdentifier)
         setupViews()
         layoutViews()
         configureViews()
     }
-    
     required public init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
