@@ -70,6 +70,8 @@ open class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: B
         return cell
     }
     
+    open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) { }
+    
     // MARK: - UICollectionViewDelegateFlowLayout
     open func collectionView(
         _ collectionView: UICollectionView,
@@ -108,4 +110,6 @@ open class BaseCollectionViewController<ViewModel: ICollectionViewModel, Cell: B
     @objc open func scrollToTop() {
         collectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
     }
+    
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) { }
 }

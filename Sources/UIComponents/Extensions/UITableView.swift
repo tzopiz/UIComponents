@@ -17,7 +17,7 @@ public extension UITableView {
     }
     
     /// Регистрирует указанные типы представлений для использования в таблице.
-    /// - Parameter cells: Типы представлений, которые необходимо зарегистрировать.
+    /// - Parameter views: Типы представлений, которые необходимо зарегистрировать.
     func registerReuseViews(_ views: UITableViewHeaderFooterView.Type...) {
         views.forEach { view in
             register(view.self, forHeaderFooterViewReuseIdentifier: view.reuseIdentifier)
