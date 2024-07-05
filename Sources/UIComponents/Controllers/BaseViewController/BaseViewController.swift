@@ -81,15 +81,22 @@ extension BaseViewController {
 
 // MARK: - ViewModelNavigationDelegate
 extension BaseViewController: ViewModelNavigationDelegate {
-    public func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    public func pushController(
+        _ viewController: UIViewController,
+        animated: Bool
+    ) {
         guard let navigationController = navigationController else { return }
         navigationController.pushViewController(viewController, animated: animated)
     }
-    public func dismiss(animated: Bool) {
+    public func dismissController(animated: Bool, completion: (() -> Void)? = nil) {
         guard let navigationController = navigationController else { return }
-        navigationController.dismiss(animated: animated, completion: nil)
+        navigationController.dismiss(animated: animated, completion: completion)
     }
-    public func presentViewController(_ viewController: UIViewController, animated: Bool) {
-        present(viewController, animated: animated)
+    public func presentController(
+        _ viewController: UIViewController,
+        animated: Bool,
+        completion: (() -> Void)? = nil
+    ) {
+        present(viewController, animated: animated, completion: completion)
     }
 }

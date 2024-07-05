@@ -8,8 +8,8 @@
 import UIKit
 
 public protocol ViewModelNavigationDelegate: AnyObject {
-    func presentViewController(_ viewController: UIViewController, animated: Bool)
-    func pushViewController(_ viewController: UIViewController, animated: Bool)
-    func dismiss(animated: Bool)
+    func presentController(_ viewController: UIViewController, animated: Bool, completion: (() -> Void)?)
+    func pushController(_ viewController: UIViewController, animated: Bool)
+    func dismissController(animated: Bool, completion: (() -> Void)?)
 }
 
