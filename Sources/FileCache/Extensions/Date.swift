@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     enum StripTimeType: CaseIterable {
         case days
         case minutes
