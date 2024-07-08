@@ -1,4 +1,4 @@
-// swift-tools-version: 5.10
+// swift-tools-version:5.10
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -11,9 +11,27 @@ let package = Package(
     products: [
         .library(
             name: "UIComponents",
-            targets: ["UIComponents"]),
+            targets: ["UIComponents"]
+        ),
+        .library(
+            name: "FileCache",
+            targets: ["FileCache"]
+        )
+    ],
+    dependencies: [
+        .package(url: "https://github.com/CocoaLumberjack/CocoaLumberjack.git", from: "3.7.0")
     ],
     targets: [
-        .target(name: "UIComponents"),
+        .target(
+            name: "UIComponents",
+            dependencies: []
+        ),
+        .target(
+            name: "FileCache",
+            dependencies: [
+                .product(name: "CocoaLumberjack", package: "CocoaLumberjack"),
+                .product(name: "CocoaLumberjackSwift", package: "CocoaLumberjack")
+            ]
+        )
     ]
 )

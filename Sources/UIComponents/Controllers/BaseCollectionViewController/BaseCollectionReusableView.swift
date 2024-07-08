@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 open class BaseCollectionReusableView: UICollectionReusableView, IConfigurable {
     
     open override class var reuseIdentifier: String {
