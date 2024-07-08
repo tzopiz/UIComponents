@@ -41,7 +41,7 @@ public extension Date {
     }
 }
 
-extension Optional where Wrapped == Date {
+public extension Optional where Wrapped == Date {
     func toString(format: String = "yyyy-MM-dd HH:mm:ss") -> String {
         switch self {
         case .none:
