@@ -15,10 +15,10 @@ public protocol JSONParsable {
     static func parse(json: JSONDictionary) -> Self?
 }
 
-public extension JSONParsable {    
-    static func buildJSON(@JSONBuilder build: () -> JSONDictionary) -> JSONDictionary { build() }
+extension JSONParsable {
+    public static func buildJSON(@JSONBuilder build: () -> JSONDictionary) -> JSONDictionary { build() }
 
-    var jsonString: String? {
+    public var jsonString: String? {
         guard let jsonData = try? JSONSerialization.data(withJSONObject: json) else {
             DDLogError("Failed to serialize JSON data for \(self)")
             return nil
@@ -35,7 +35,7 @@ public extension JSONParsable {
     /// Converts a JSON string to an object.
     /// - Parameter jsonString: JSON string.
     /// - Returns: Returns an object created from a JSON string, or nil if the conversion failed.
-    static func from(jsonString: String) -> Self? {
+    public static func from(jsonString: String) -> Self? {
         guard let jsonData = jsonString.data(using: .utf8) else {
             DDLogError("Failed to convert string to data: \(jsonString)")
             return nil

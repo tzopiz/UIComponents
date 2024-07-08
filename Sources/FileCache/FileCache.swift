@@ -27,6 +27,10 @@ public class FileCache<T: JSONParsable & CSVParsable> {
         case unknown
     }
     
+    public init() {
+        
+    }
+    
     public func loadFromFile(named fileName: String, format: FileFormat) -> Result<[T], FileError> {
         do {
             let url = try getDocumentsDirectory().appendingPathComponent(fileName)
@@ -71,7 +75,7 @@ public class FileCache<T: JSONParsable & CSVParsable> {
     }
     
     @discardableResult
-    public func saveToFile(named fileName: String, items: [T], format: FileFormat = .json) -> FileError? {
+    public func saveToFile(_ items: [T], named fileName: String, format: FileFormat = .json) -> FileError? {
         do {
             let url = try getDocumentsDirectory().appendingPathComponent(fileName)
             switch format {

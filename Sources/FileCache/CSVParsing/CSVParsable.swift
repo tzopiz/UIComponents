@@ -13,5 +13,5 @@ public protocol CSVParsable {
 }
 
 extension CSVParsable {
-    static func buildCSV(@CSVBuilder build: () -> String) -> String { build() }
+    public static func buildCSV(@CSVBuilder build: () -> String) -> String { build() }
 }
