@@ -11,3 +11,7 @@ public protocol CSVParsable {
     var csv: String { get }
     static func parse(csv: String) -> Self?
 }
+
+extension CSVParsable {
+    static func buildCSV(@CSVBuilder build: () -> String) -> String { build() }
+}

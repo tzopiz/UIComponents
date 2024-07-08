@@ -16,6 +16,8 @@ public protocol JSONParsable {
 }
 
 public extension JSONParsable {    
+    static func buildJSON(@JSONBuilder build: () -> JSONDictionary) -> JSONDictionary { build() }
+
     var jsonString: String? {
         guard let jsonData = try? JSONSerialization.data(withJSONObject: json) else {
             DDLogError("Failed to serialize JSON data for \(self)")
