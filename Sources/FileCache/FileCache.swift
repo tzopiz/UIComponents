@@ -27,9 +27,7 @@ public class FileCache<T: JSONParsable & CSVParsable> {
         case unknown
     }
     
-    public init() {
-        
-    }
+    public init() { }
     
     public func loadFromFile(named fileName: String, format: FileFormat) -> Result<[T], FileError> {
         do {
@@ -52,7 +50,7 @@ public class FileCache<T: JSONParsable & CSVParsable> {
     private func loadFromJSONFile(with url: URL) -> Result<[T], FileError> {
         do {
             let data = try Data(contentsOf: url)
-            guard let jsonArray = try JSONSerialization.jsonObject(with: data) as? [JSONDictionary]
+            guard let jsonArray = try JSONSerialization.jsonObject(with: data) as? [T.JSONType]
             else { return .failure(.dataCorrupted) }
             
             let items = jsonArray.compactMap { T.parse(json: $0) }

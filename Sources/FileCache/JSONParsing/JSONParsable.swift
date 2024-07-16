@@ -10,13 +10,14 @@ import CocoaLumberjackSwift
 
 public typealias JSONDictionary = [String: Any]
 public protocol JSONParsable {
-    var json: JSONDictionary { get }
+    associatedtype JSONType
+    var json: JSONType { get }
     
-    static func parse(json: JSONDictionary) -> Self?
+    static func parse(json: JSONType) -> Self?
 }
 
 extension JSONParsable {
-    public static func buildJSON(@JSONBuilder build: () -> JSONDictionary) -> JSONDictionary { build() }
+    public static func buildJSONDictionary(@JSONBuilder build: () -> JSONDictionary) -> JSONDictionary { build() }
 
     public var jsonString: String? {
         guard let jsonData = try? JSONSerialization.data(withJSONObject: json) else {
@@ -42,7 +43,7 @@ extension JSONParsable {
         }
         
         guard let jsonObject = try? JSONSerialization.jsonObject(with: jsonData),
-              let json = jsonObject as? JSONDictionary else {
+              let json = jsonObject as? JSONType else {
             DDLogError("Failed to deserialize JSON data from string: \(jsonString)")
             return nil
         }
