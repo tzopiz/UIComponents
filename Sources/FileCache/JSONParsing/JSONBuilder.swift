@@ -30,7 +30,10 @@ public struct JSONBuilder {
     }
     
     public static func buildExpression(_ expression: (key: String, value: Date?)) -> JSONDictionary {
-        return [expression.key: expression.value.toString()]
+        guard let value = expression.value?.timeIntervalSince1970 else {
+            return [:]
+        }
+        return [expression.key: value]
     }
     
     public static func buildExpression(_ expression: (key: String, value: Bool)) -> JSONDictionary {
