@@ -1,6 +1,6 @@
 //
-//  File.swift
-//
+//  TabBarController.swift
+//  UIComponents
 //
 //  Created by Дмитрий Корчагин on 6/12/24.
 //

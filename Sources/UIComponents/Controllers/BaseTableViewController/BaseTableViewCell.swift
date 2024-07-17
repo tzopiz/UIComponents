@@ -1,6 +1,6 @@
 //
 //  BaseTableViewCell.swift
-//
+//  UIComponents
 //
 //  Created by Дмитрий Корчагин on 7/1/24.
 //

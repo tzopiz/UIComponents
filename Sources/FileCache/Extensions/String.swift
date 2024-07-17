@@ -1,6 +1,6 @@
 //
-//  File.swift
-//  
+//  String.swift
+//  FileCache
 //
 //  Created by Дмитрий Корчагин on 7/8/24.
 //

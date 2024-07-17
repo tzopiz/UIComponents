@@ -1,6 +1,6 @@
 //
 //  JSONParsable.swift
-//  DailyDeeds
+//  FileCache
 //
 //  Created by Дмитрий Корчагин on 7/8/24.
 //
