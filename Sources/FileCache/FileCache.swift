@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftData
 import CocoaLumberjackSwift
 
 public class FileCache<T: JSONParsable & CSVParsable> {
@@ -13,7 +14,7 @@ public class FileCache<T: JSONParsable & CSVParsable> {
         case json
         case csv
     }
-    
+    private let modelContainer: ModelContainer
     public enum FileError: Error {
         case fileNotFound
         case dataCorrupted
